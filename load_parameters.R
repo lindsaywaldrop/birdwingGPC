@@ -49,5 +49,13 @@ calcAR(as.numeric(as.character(levels.AR[1])),0.1)
 nu=1.5e-05
 calcSpeeds(as.numeric(as.character(levels.Re[1])),0.1,nu)
 
-parameters[parameters$Camber==levels.Camber[10],]
+parameters[parameters$Camber==levels.Camber[11],]
+nrow(parameters[parameters$Camber==levels.Camber[11],])
+
+progress<-0
+for(i in 1:12){
+progress<-progress+nrow(parameters[parameters$Camber==levels.Camber[i],])
+}
+progress/681
+  
 calcAR(10.098076,0.1)
