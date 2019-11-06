@@ -1,0 +1,3 @@
+# Don't track the contents of these files
+*.DS_Store
+.gitignore~
