@@ -1,30 +1,38 @@
 
 rm(list=ls())
 
-setwd("~/Dropbox (Chapman)/wing_gPC/birdwingGPC")
+setwd("~/Dropbox (Chapman)/wing_gPC/birdwingGPC") # Sets working directory
 
-parameters<-read.table("input_data_681.dat",header=FALSE)
-names(parameters)<-c("AR","Camber","Re")
-parameters$ARFac<-as.factor(parameters$AR)
+
+##### Loading Parameters ##### 
+
+parameters<-read.table("input_data_681.dat",header=FALSE)  # Reads in parameter file for 681 simulations
+names(parameters)<-c("AR","Camber","Re") # Sets names to columns
+
+# Create factor data class columns for each parameter, record levels
+parameters$ARFac<-as.factor(parameters$AR) 
 levels.AR<-levels(parameters$ARFac)
 parameters$CamberFac<-as.factor(parameters$Camber)
 levels.Camber<-levels(parameters$CamberFac)
 parameters$ReFac<-as.factor(parameters$Re)
 levels.Re<-levels(parameters$ReFac)
 
-summary(parameters)
+summary(parameters) #Summarize data
+write.csv(levels.Camber,file="camber_list.csv") # Writes list of camber factor values to csv files
 
-write.csv(levels.Camber,file="camber_list.csv")
+##### Generating Airfoil dat files #####
 
-ASwing<-read.csv("AS6091.csv",header=TRUE)
-camber.original<-(max(ASwing$y)-min(ASwing$y))/(max(ASwing$x)-min(ASwing$x))
+ASwing<-read.csv("AS6091.csv",header=TRUE)  
+# Calculates original camber based on camber calculation done by Jonathan 
+camber.original<-(max(ASwing$y)-min(ASwing$y))/(max(ASwing$x)-min(ASwing$x)) 
 
+# Opens and writes dat files
 sink("AS6091_base.dat")
 cat("AS6091\ camber=",camber,"\n")
 sink()
-#write.table(c("wing"),file="birdwing.dat",append=FALSE,col.names=FALSE,row.names=FALSE,sep="  ")
 write.table(ASwing,file="AS6091_base.dat",append=TRUE,col.names=FALSE,row.names=FALSE,sep="  ")
 
+# Calculates new camber and moves points appropriately
 for (i in 1:length(levels.Camber)){
   camber.new<-as.numeric(as.character(levels.Camber[i]))
   message("camber ",i,"= ",camber.new)
@@ -43,13 +51,22 @@ for (i in 1:length(levels.Camber)){
 }
 
 
-calcAR<-function(AR.new,C){0.5*AR.new*C}
-calcSpeeds<-function(Re,C,nu){(Re*nu)/C}
-calcAR(as.numeric(as.character(levels.AR[1])),0.1)
-nu=1.5e-05
-calcSpeeds(as.numeric(as.character(levels.Re[1])),0.1,nu)
 
-data<-parameters[parameters$Camber==levels.Camber[23],]
+
+##### Other Random Calculations, scratch work ####
+
+# Functions
+calcAR<-function(AR.new,C){0.5*AR.new*C} # Calculates wing length from aspect ratio
+calcSpeeds<-function(Re,C){  # Calculates air speed from Reynolds number
+  nu=1.5e-05
+  return((Re*nu)/C)
+} 
+
+calcAR(as.numeric(as.character(levels.AR[1])),0.1)
+
+calcSpeeds(as.numeric(as.character(levels.Re[1])),0.1)
+
+data<-parameters[parameters$Camber==levels.Camber[24],]
 nrow(parameters[parameters$Camber==levels.Camber[23],])
 
 progress<-0
