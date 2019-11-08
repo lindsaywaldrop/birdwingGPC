@@ -66,7 +66,7 @@ calcAR(as.numeric(as.character(levels.AR[1])),0.1)
 
 calcSpeeds(as.numeric(as.character(levels.Re[1])),0.1)
 
-data<-parameters[parameters$Camber==levels.Camber[24],]
+runs<-parameters[parameters$Camber==levels.Camber[2],]
 nrow(parameters[parameters$Camber==levels.Camber[23],])
 
 progress<-0
@@ -76,5 +76,6 @@ progress<-progress+nrow(parameters[parameters$Camber==levels.Camber[i],])
 progress/681
   
 calcAR(10.098076,0.1)
+
 
 

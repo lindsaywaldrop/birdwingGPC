@@ -10,28 +10,83 @@ calcSpeeds<-function(Re){  # Calculates air speed from Reynolds number
   return((Re*nu)/C)
 } 
 
-calcMaxCLCD<-function(parameters,ARnumber,Cambernumber,Re){
+MaxCLCD<-function(runs2,levels.AR,ARnumber,Cambernumber){
+  print(paste("Cam",Cambernumber,"/AR",ARnumber,"_Graph_2.csv",sep=""))
+  data<-read.csv(paste("Cam",Cambernumber,"/AR",ARnumber,"_Graph_2.csv",sep=""),header=TRUE)
+  data <- data[,colSums(is.na(data))<nrow(data)] # Removing columns with only NA's
+  speeds<-calcSpeeds(as.numeric(as.character(runs2[,6])))
+  runs2<-runs2[order(as.character(speeds)),]
+  maxCLCD<-rep(NA,nrow(runs2))
+  for(i in 1:nrow(runs2)){
+    x=na.omit(data[,2*i-1])
+    y=na.omit(data[,2*i])
+    curve<-smooth.spline(y=y,x=x)
+    new.curve<-predict(curve,seq(min(x),max(x),by=0.0001))
+    maxCLCD[i]<-max(new.curve$y)
+  }
+  return(maxCLCD)
+}
+
+slopeCL<-function(runs2,levels.AR,ARnumber,Cambernumber){
+  data<-read.csv(paste("Cam",Cambernumber,"/AR",ARnumber,"_Graph_3.csv",sep=""),header=TRUE)
+  data <- data[,colSums(is.na(data))<nrow(data)] # Removing columns with only NA's
+  speeds<-calcSpeeds(as.numeric(as.character(runs2[,6])))
+  runs2<-runs2[order(as.character(speeds)),]
+  slopeCL<-rep(NA,nrow(runs2))
+  yintCL<-rep(NA,nrow(runs2))
+  for(i in 1:nrow(runs2)){
+    model<-lm(data[,2*i]~data[,2*i-1])
+    slopeCL[i]<-as.numeric(model[["coefficients"]][2])
+    yintCL[i]<-as.numeric(model[["coefficients"]][1])
+  }
+  CL<-data.frame(slopeCL,yintCL)
+  return(CL)
+}
+
+Efficiency<-function(runs2,levels.AR,ARnumber,Cambernumber){
+  data<-read.csv(paste("Cam",Cambernumber,"/AR",ARnumber,"_Graph_1.csv",sep=""),header=TRUE)
+  data <- data[,colSums(is.na(data))<nrow(data)] # Removing columns with only NA's
+  speeds<-calcSpeeds(as.numeric(as.character(runs2[,6])))
+  runs2<-runs2[order(as.character(speeds)),]
+  eff<-rep(NA,nrow(runs2))
+  for(i in 1:nrow(runs2)){
+    eff[i]<-mean(data[,2*i],na.rm=TRUE)
+  }
+  return(eff)
+}
+
+GammaMin<-function(runs2,levels.AR,ARnumber,Cambernumber){
   data<-read.csv(paste("Cam",Cambernumber,"/AR",ARnumber,"_Graph_0.csv",sep=""),header=TRUE)
   data <- data[,colSums(is.na(data))<nrow(data)] # Removing columns with only NA's
-  speed<-seq(2,30,by=0.5)
-  data$speed<-speed
-  data<-data[,c(17,3,4,1,2,5,6,7,8,9,10,11,12,13,14,15,16)]
-  aoa<-seq(-2,5,by=1)
-  CL<-rep(NA,length(aoa))
-  CD<-rep(NA,length(aoa))
-  for(i in 1:length(aoa)){
-    CL[i]<-data[data$speed==10,2*i]
-    CD[i]<-data[data$speed==10,2*i-1]
+  speeds<-calcSpeeds(as.numeric(as.character(runs2[,6])))
+  runs2<-runs2[order(as.character(speeds)),]
+  Gamma<-rep(NA,nrow(runs2))
+  aoa<-rep(NA,nrow(runs2))
+  for(i in 1:nrow(runs2)){
+    x=na.omit(data[,2*i-1])
+    y=na.omit(data[,2*i])
+    curve<-smooth.spline(y=y,x=x)
+    new.curve<-predict(curve,seq(min(x),max(x),by=0.0001))
+    Gamma[i]<-min(new.curve$y)
+    aoa[i]<-new.curve$x[new.curve$y==min(new.curve$y)]
   }
-  curve<-smooth.spline(y=CD,x=CL)
-  new.curve<-predict(curve,seq(min(CL),max(CL),by=0.0001))
-  slopes=new.curve$x/new.curve$y
-  loweraoa=aoa[curve.data$CL==max(curve.data$CL[new.curve$x[slopes==max(slopes)]>curve.data$CL])]
-  upperaoa=aoa[curve.data$CL==min(curve.data$CL[new.curve$x[slopes==max(slopes)]<curve.data$CL])]
-  slopeaoa=(min(curve.data$CL[new.curve$x[slopes==max(slopes)]<curve.data$CL])-max(curve.data$CL[new.curve$x[slopes==max(slopes)]>curve.data$CL]))/(upperaoa-loweraoa)
-  baoa=min(curve.data$CL[new.curve$x[slopes==max(slopes)]<curve.data$CL])-slopeaoa*upperaoa
-  maxaoa=(new.curve$x[slopes==max(slopes)]-baoa)/slopeaoa
+  G<-data.frame(Gamma,aoa)
+  return(G)
 }
+
+
+ARnumber<-13
+Cambernumber<-2
+runs<-parameters[parameters$Camber==levels.Camber[4],]
+levels.AR<-levels(parameters$ARFac)
+runs2<-runs[runs$ARFac==levels.AR[ARnumber],]
+
+m<-MaxCLCD(runs2,levels.AR,13,2)
+m<-MaxCLCD(runs2,levels.AR,8,2)
+m<-MaxCLCD(runs2,levels.AR,18,2)
+m<-slopeCL(runs2,levels.AR,13,2)
+eff<-Efficiency(runs2,levels.AR,13,2)
+g<-GammaMin(runs2,levels.AR,13,2)
 
 ##### Loading Parameters ##### 
 
@@ -45,6 +100,8 @@ parameters$CamberFac<-as.factor(parameters$Camber)
 levels.Camber<-levels(parameters$CamberFac)
 parameters$ReFac<-as.factor(parameters$Re)
 levels.Re<-levels(parameters$ReFac)
+parameters$speeds<-calcSpeeds(parameters$Re)
+parameters$ARnumber<-as.numeric(parameters$ARFac)
 
 summary(parameters) #Summarize data
 write.csv(levels.Camber,file="camber_list.csv") # Writes list of camber factor values to csv files
