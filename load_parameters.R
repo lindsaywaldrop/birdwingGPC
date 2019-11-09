@@ -70,7 +70,7 @@ runs<-parameters[parameters$Camber==levels.Camber[2],]
 nrow(parameters[parameters$Camber==levels.Camber[23],])
 
 progress<-0
-for(i in 1:22){
+for(i in 1:13){
 progress<-progress+nrow(parameters[parameters$Camber==levels.Camber[i],])
 }
 progress/681

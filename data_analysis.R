@@ -77,7 +77,7 @@ GammaMin<-function(runs2,levels.AR,ARnumber,Cambernumber){
 
 ARnumber<-13
 Cambernumber<-2
-runs<-parameters[parameters$Camber==levels.Camber[4],]
+runs<-parameters[parameters$Camber==levels.Camber[9],]
 levels.AR<-levels(parameters$ARFac)
 runs2<-runs[runs$ARFac==levels.AR[ARnumber],]
 
