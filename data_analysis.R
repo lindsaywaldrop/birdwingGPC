@@ -13,7 +13,7 @@ calcSpeeds<-function(Re){  # Calculates air speed from Reynolds number
 MaxCLCD<-function(runs,Cambernumber){ # Calculates Max CLCD from graph 0 for each set of cambers
   h<-0
   vec<-unique(as.numeric(runs$ARFac))
-  maxCLCD<-rep(NA,times=nrow(runs))
+  maxCLCD<-matrix(data=NA,ncol=2,nrow=nrow(runs))
   for(j in 1:length(vec)){
     ARnumber<-vec[j]
     runs2<-runs[runs$ARFac==levels.AR[ARnumber],]
@@ -24,9 +24,10 @@ MaxCLCD<-function(runs,Cambernumber){ # Calculates Max CLCD from graph 0 for eac
       h<-h+1
       x=na.omit(data[,2*i-1])
       y=na.omit(data[,2*i])
-      curve<-smooth.spline(y=y,x=x)
+      curve<-smooth.spline(y=y,x=x,spar=0.5)
       new.curve<-predict(curve,seq(min(x),max(x),by=0.0001))
-      maxCLCD[h]<-max(new.curve$y)
+      maxCLCD[h,1]<-max(new.curve$y)
+      maxCLCD[h,2]<-new.curve$x[new.curve$y==max(new.curve$y)]
     }
   }
   return(maxCLCD)
@@ -86,7 +87,7 @@ GammaMin<-function(runs,Cambernumber){ # Calculates minimum glide angle and aoa 
       h<-h+1
       x=na.omit(data[,2*i-1])
       y=na.omit(data[,2*i])
-      curve<-smooth.spline(y=y,x=x)
+      curve<-smooth.spline(y=y,x=x,spar=0.5)
       new.curve<-predict(curve,seq(min(x),max(x),by=0.0001))
       gammas[h,1]<-min(new.curve$y)
       gammas[h,2]<-new.curve$x[new.curve$y==min(new.curve$y)]
@@ -114,10 +115,11 @@ parameters<-parameters[order(as.character(parameters$CamberFac)),]
 
 #### Allocating space in data frame ####
 parameters$CLCD<-rep(NA,nrow(parameters))
+parameters$Caoa<-rep(NA,nrow(parameters))
 parameters$slope<-rep(NA,nrow(parameters))
 parameters$yint<-rep(NA,nrow(parameters))
 parameters$gamma<-rep(NA,nrow(parameters))
-parameters$aoa<-rep(NA,nrow(parameters))
+parameters$gaoa<-rep(NA,nrow(parameters))
 parameters$Efficiency<-rep(NA,nrow(parameters))
 
 #### Main analysis loop ####
@@ -129,14 +131,16 @@ for(Cambernumber in 1:n){
   g1<-g2+1
   runs<-parameters[parameters$Camber==levels.Camber[Cambernumber],]
   g2<-g1+(nrow(runs)-1)
-  parameters$CLCD[g1:g2]<-MaxCLCD(runs,Cambernumber)
+  C<-MaxCLCD(runs,Cambernumber)
+  parameters$CLCD[g1:g2]<-C[,1]
+  parameters$Caoa[g1:g2]<-C[,2]
   s<-slopeCL(runs,Cambernumber)
   parameters$slope[g1:g2]<-s[,1]
   parameters$yint[g1:g2]<-s[,2]
   parameters$Efficiency[g1:g2]<-Efficiency(runs,Cambernumber)
   gam<-GammaMin(runs,Cambernumber)
   parameters$gamma[g1:g2]<-gam[,1]
-  parameters$aoa[g1:g2]<-gam[,2]
+  parameters$gaoa[g1:g2]<-gam[,2]
 }
 
 #### Checking and Saving Data ####
@@ -145,4 +149,16 @@ message("^*~.*^*~Completeness check~*^*~.~*^")
 message("Number of NAs: ",sum(is.na(parameters)))
 
 write.csv(parameters,file=paste("birdwing_gpc_data_",date(),".csv",sep=""))
+
+library(ggplot2)
+ggplot(parameters,aes(Camber,Re,color=gamma))+geom_point(size=3)+
+  scale_color_gradient2(midpoint=mean(parameters$gamma), 
+                         low="blue", mid="white",high="red", 
+                         space ="Lab" )
+
+ggplot(parameters,aes(Camber,Re,color=Caoa))+geom_point(size=3)+
+  scale_color_gradient2(midpoint=mean(parameters$Caoa), 
+                        low="blue", mid="white",high="red", 
+                        space ="Lab" )
+
 
