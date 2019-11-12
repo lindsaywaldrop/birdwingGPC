@@ -6,20 +6,19 @@ setwd("~/Dropbox (Chapman)/wing_gPC/birdwingGPC") # Sets working directory
 
 ##### Loading Parameters ##### 
 
-parameters<-read.table("input_data_681.dat",header=FALSE)  # Reads in parameter file for 681 simulations
-names(parameters)<-c("AR","Camber","Re") # Sets names to columns
+inputs681<-read.table("input_data_681.dat",header=FALSE)  # Reads in parameter file for 681 simulations
+inputs1233<-read.table("input_data_1233.dat",header=FALSE)  # Reads in parameter file for 681 simulations
+names(inputs681)<-c("AR","Camber","Re") # Sets names to columns
+names(inputs1233)<-c("AR","Camber","Re") # Sets names to columns
 
 # Create factor data class columns for each parameter, record levels
-parameters$ARFac<-as.factor(parameters$AR) 
-levels.AR<-levels(parameters$ARFac)
-parameters$CamberFac<-as.factor(parameters$Camber)
-levels.Camber<-levels(parameters$CamberFac)
-parameters$ReFac<-as.factor(parameters$Re)
-levels.Re<-levels(parameters$ReFac)
+inputs681$ARFac<-as.factor(inputs681$AR) 
+inputs1233$ARFac<-as.factor(inputs1233$AR) 
+levels618.AR<-levels(inputs681$ARFac)
+levels1233.AR<-levels(inputs1233$ARFac)
 
-summary(parameters) #Summarize data
-write.csv(levels.Camber,file="camber_list.csv") # Writes list of camber factor values to csv files
-
+inputs681$CamberFac<-as.factor(inputs681$Camber)
+levels.camber<-levels(inputs681$CamberFac)
 ##### Generating Airfoil dat files #####
 
 ASwing<-read.csv("AS6091.csv",header=TRUE)  

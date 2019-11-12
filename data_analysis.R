@@ -150,6 +150,8 @@ message("Number of NAs: ",sum(is.na(parameters)))
 
 write.csv(parameters,file=paste("birdwing_gpc_data_",date(),".csv",sep=""))
 
+#### Plotting data #### 
+
 library(ggplot2)
 ggplot(parameters,aes(Camber,Re,color=gamma))+geom_point(size=3)+
   scale_color_gradient2(midpoint=mean(parameters$gamma), 
