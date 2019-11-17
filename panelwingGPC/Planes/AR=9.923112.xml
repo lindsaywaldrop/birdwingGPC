@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE explane>
+<explane version="1.0">
+    <Units>
+        <length_unit_to_meter>1</length_unit_to_meter>
+        <mass_unit_to_kg>1</mass_unit_to_kg>
+    </Units>
+    <Plane>
+        <Name>AR=9.923112</Name>
+        <Description></Description>
+        <Inertia/>
+        <has_body>true</has_body>
+        <body>
+            <Name>AR=9.923112_body</Name>
+            <Color>
+                <red>98</red>
+                <green>102</green>
+                <blue>156</blue>
+                <alpha>255</alpha>
+            </Color>
+            <Description></Description>
+            <Position>          0,           0,        0.01</Position>
+            <Type>FLATPANELS</Type>
+            <Panel_Stripes>
+                <stripe_0>1</stripe_0>
+                <stripe_1>1</stripe_1>
+                <stripe_2>1</stripe_2>
+                <stripe_3>1</stripe_3>
+                <stripe_4>1</stripe_4>
+            </Panel_Stripes>
+            <Inertia>
+                <Volume_Mass>  0.900</Volume_Mass>
+            </Inertia>
+            <frame>
+                <x_panels>1</x_panels>
+                <Position>  -0.086853,           0,           0</Position>
+                <point>  -0.086853,           0,   -0.030799</point>
+                <point>  -0.086853,           0,   -0.030799</point>
+                <point>  -0.086853,           0,   -0.030799</point>
+                <point>  -0.086853,           0,   -0.030799</point>
+                <point>  -0.086853,           0,   -0.030799</point>
+            </frame>
+            <frame>
+                <x_panels>1</x_panels>
+                <Position>  -0.042503,           0,           0</Position>
+                <point>  -0.042503,           0,    0.003098</point>
+                <point>  -0.042503,    0.012207,    0.001161</point>
+                <point>  -0.042503,    0.018524,  -0.0028376</point>
+                <point>  -0.042503,    0.015426,   -0.023494</point>
+                <point>  -0.042503,           0,   -0.046216</point>
+            </frame>
+            <frame>
+                <x_panels>1</x_panels>
+                <Position>   0.038117,           0,           0</Position>
+                <point>   0.038117,           0,   0.0060756</point>
+                <point>   0.038117,    0.030243,  -0.0022689</point>
+                <point>   0.038117,    0.027305,   -0.037003</point>
+                <point>   0.038117,    0.019832,   -0.049841</point>
+                <point>   0.038117,           0,   -0.058053</point>
+            </frame>
+            <frame>
+                <x_panels>1</x_panels>
+                <Position>    0.12777,           0,           0</Position>
+                <point>    0.12777,           0, -0.00066613</point>
+                <point>    0.12777,   0.0098549,   -0.006831</point>
+                <point>    0.12777,    0.016915,   -0.021704</point>
+                <point>    0.12777,   0.0086827,   -0.035175</point>
+                <point>    0.12777,           0,     -0.0388</point>
+            </frame>
+            <frame>
+                <x_panels>1</x_panels>
+                <Position>    0.21616,           0,           0</Position>
+                <point>    0.21616,           0,   -0.019159</point>
+                <point>    0.21616,   0.0071867,   -0.026211</point>
+                <point>    0.21616,   0.0085204,    -0.03212</point>
+                <point>    0.21616,   0.0058524,   -0.039172</point>
+                <point>    0.21616,           0,   -0.040672</point>
+            </frame>
+            <frame>
+                <x_panels>1</x_panels>
+                <Position>      0.248,           0,           0</Position>
+                <point>      0.248,           0,   -0.024647</point>
+                <point>      0.248,   0.0046367,   -0.030193</point>
+                <point>      0.248,   0.0054899,   -0.033606</point>
+                <point>      0.248,   0.0049586,   -0.040708</point>
+                <point>      0.248,           0,   -0.044834</point>
+            </frame>
+            <frame>
+                <x_panels>1</x_panels>
+                <Position>    0.28854,           0,           0</Position>
+                <point>    0.28854,           0,   -0.041495</point>
+                <point>    0.28854,           0,   -0.041495</point>
+                <point>    0.28854,           0,   -0.041495</point>
+                <point>    0.28854,           0,   -0.041495</point>
+                <point>    0.28854,           0,   -0.041495</point>
+            </frame>
+        </body>
+        <wing>
+            <Name>Main Wing</Name>
+            <Type>MAINWING</Type>
+            <Color>
+                <red>129</red>
+                <green>162</green>
+                <blue>173</blue>
+                <alpha>255</alpha>
+            </Color>
+            <Description></Description>
+            <Position>          0,           0,           0</Position>
+            <Tilt_angle>  2.000</Tilt_angle>
+            <Symetric>true</Symetric>
+            <isFin>false</isFin>
+            <isDoubleFin>false</isDoubleFin>
+            <isSymFin>false</isSymFin>
+            <Inertia>
+                <Volume_Mass>  0.000</Volume_Mass>
+            </Inertia>
+            <Sections>
+                <Section>
+                    <y_position>  0.000</y_position>
+                    <Chord>  0.059</Chord>
+                    <xOffset>  0.000</xOffset>
+                    <Dihedral>  0.000</Dihedral>
+                    <Twist>  0.000</Twist>
+                    <x_number_of_panels>13</x_number_of_panels>
+                    <x_panel_distribution>COSINE</x_panel_distribution>
+                    <y_number_of_panels>19</y_number_of_panels>
+                    <y_panel_distribution>UNIFORM</y_panel_distribution>
+                    <Left_Side_FoilName>AS6091 camber= 0.02254358</Left_Side_FoilName>
+                    <Right_Side_FoilName>AS6091 camber= 0.02254358</Right_Side_FoilName>
+                </Section>
+                <Section>
+                    <y_position>  0.110</y_position>
+                    <Chord>  0.140</Chord>
+                    <xOffset> -0.030</xOffset>
+                    <Dihedral>  0.000</Dihedral>
+                    <Twist>  0.000</Twist>
+                    <x_number_of_panels>13</x_number_of_panels>
+                    <x_panel_distribution>COSINE</x_panel_distribution>
+                    <y_number_of_panels>3</y_number_of_panels>
+                    <y_panel_distribution>UNIFORM</y_panel_distribution>
+                    <Left_Side_FoilName>AS6091 camber= 0.02254358</Left_Side_FoilName>
+                    <Right_Side_FoilName>AS6091 camber= 0.02254358</Right_Side_FoilName>
+                </Section>
+                <Section>
+                    <y_position>  0.220</y_position>
+                    <Chord>  0.139</Chord>
+                    <xOffset> -0.040</xOffset>
+                    <Dihedral>  0.000</Dihedral>
+                    <Twist>  0.000</Twist>
+                    <x_number_of_panels>13</x_number_of_panels>
+                    <x_panel_distribution>COSINE</x_panel_distribution>
+                    <y_number_of_panels>1</y_number_of_panels>
+                    <y_panel_distribution>UNIFORM</y_panel_distribution>
+                    <Left_Side_FoilName>AS6091 camber= 0.02254358</Left_Side_FoilName>
+                    <Right_Side_FoilName>AS6091 camber= 0.02254358</Right_Side_FoilName>
+                </Section>
+                <Section>
+                    <y_position>  0.330</y_position>
+                    <Chord>  0.129</Chord>
+                    <xOffset> -0.030</xOffset>
+                    <Dihedral>  0.000</Dihedral>
+                    <Twist>  0.000</Twist>
+                    <x_number_of_panels>13</x_number_of_panels>
+                    <x_panel_distribution>COSINE</x_panel_distribution>
+                    <y_number_of_panels>1</y_number_of_panels>
+                    <y_panel_distribution>UNIFORM</y_panel_distribution>
+                    <Left_Side_FoilName>AS6091 camber= 0.02254358</Left_Side_FoilName>
+                    <Right_Side_FoilName>AS6091 camber= 0.02254358</Right_Side_FoilName>
+                </Section>
+                <Section>
+                    <y_position>  0.440</y_position>
+                    <Chord>  0.099</Chord>
+                    <xOffset> -0.010</xOffset>
+                    <Dihedral>  0.000</Dihedral>
+                    <Twist>  0.000</Twist>
+                    <x_number_of_panels>13</x_number_of_panels>
+                    <x_panel_distribution>COSINE</x_panel_distribution>
+                    <y_number_of_panels>1</y_number_of_panels>
+                    <y_panel_distribution>UNIFORM</y_panel_distribution>
+                    <Left_Side_FoilName>AS6091 camber= 0.02254358</Left_Side_FoilName>
+                    <Right_Side_FoilName>AS6091 camber= 0.02254358</Right_Side_FoilName>
+                </Section>
+                <Section>
+                    <y_position>  0.549</y_position>
+                    <Chord>  0.034</Chord>
+                    <xOffset>  0.030</xOffset>
+                    <Dihedral>  0.000</Dihedral>
+                    <Twist>  0.000</Twist>
+                    <x_number_of_panels>13</x_number_of_panels>
+                    <x_panel_distribution>COSINE</x_panel_distribution>
+                    <y_number_of_panels>1</y_number_of_panels>
+                    <y_panel_distribution>UNIFORM</y_panel_distribution>
+                    <Left_Side_FoilName>AS6091 camber= 0.02254358</Left_Side_FoilName>
+                    <Right_Side_FoilName>AS6091 camber= 0.02254358</Right_Side_FoilName>
+                </Section>
+            </Sections>
+        </wing>
+    </Plane>
+</explane>
