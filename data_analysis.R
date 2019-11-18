@@ -1,6 +1,6 @@
 rm(list=ls())
 
-setwd("~/Dropbox (Chapman)/wing_gPC/birdwingGPC") # Sets working directory
+setwd("~/Dropbox (Chapman)/wing_gPC/birdwingGPC/") # Sets working directory
 
 #### Functions ####
 
@@ -132,6 +132,8 @@ parameters$gaoa<-rep(NA,nrow(parameters))
 parameters$Efficiency<-rep(NA,nrow(parameters))
 
 #### Main analysis loop ####
+setwd("~/Dropbox (Chapman)/wing_gPC/birdwingGPC/panelwingGPC") # Sets working directory
+
 n<-nlevels(parameters$CamberFac)
 g1<-0
 g2<-0
@@ -154,8 +156,9 @@ for(Cambernumber in 1:n){
 
 #### Checking and Saving Data ####
 parameters<-parameters[order(as.numeric(row.names(parameters))),]
-message("^*~.*^*~Completeness check~*^*~.~*^")
-message("Number of NAs: ",sum(is.na(parameters)))
+message("~.*^*~Completeness check~*^*~.~\n",
+        "Number of NAs: ",sum(is.na(parameters)))
+
 
 write.csv(parameters,file=paste("birdwing_gpc_data_",date(),".csv",sep=""))
 
