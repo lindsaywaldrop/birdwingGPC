@@ -24,6 +24,7 @@ MaxCLCD<-function(runs,Cambernumber){ # Calculates Max CLCD from graph 0 for eac
   maxCLCD<-matrix(data=NA,ncol=2,nrow=nrow(runs))
   for(j in 1:length(vec)){
     ARnumber<-vec[j]
+    message("Aspect Ratio: ",ARnumber)
     runs2<-runs[runs$ARFac==levels.AR[ARnumber],]
     runs2<-runs2[order(as.character(runs2$speeds)),]
     data<-read.csv(paste("Cam",Cambernumber,"/AR",ARnumber,"_Graph_2.csv",sep=""),header=TRUE)
