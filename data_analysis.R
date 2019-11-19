@@ -12,12 +12,6 @@ calcSpeeds<-function(Re){  # Calculates air speed from Reynolds number
 
 findL<-function(AR){AR/18.06685}
 
-myColorRamp <- function(colors, values, minmax) {
-  v <- (values - min(minmax))/diff(range(minmax))
-  x <- colorRamp(colors)(v)
-  rgb(x[,1], x[,2], x[,3], maxColorValue = 255)
-}
-
 MaxCLCD<-function(runs,Cambernumber){ # Calculates Max CLCD from graph 0 for each set of cambers
   h<-0
   vec<-unique(as.numeric(runs$ARFac))
@@ -163,50 +157,5 @@ message("~.*^*~Completeness check~*^*~.~\n",
 
 write.csv(parameters,file=paste("birdwing_gpc_data_",date(),".csv",sep=""))
 
-#### Plotting data #### 
-library(ggplot2)
-library(scatterplot3d)
-
-parameters<-read.csv(file=file.choose(),header=TRUE)
-species<-read.csv(file=file.choose(),header=TRUE)
-
-ggplot(parameters,aes(Camber,Re,color=gamma))+geom_point(size=3)+
-  scale_color_gradient2(midpoint=mean(parameters$gamma), 
-                         low="blue", mid="white",high="red", 
-                         space ="Lab" )
-
-ggplot(parameters,aes(Camber,Re,color=Caoa))+geom_point(size=3)+
-  scale_color_gradient2(midpoint=mean(parameters$Caoa), 
-                        low="blue", mid="white",high="red", 
-                        space ="Lab" )
-
-cols <- myColorRamp(c("blue","red"), parameters$gamma, range(parameters$gamma))
-sp3d<-scatterplot3d(parameters$Camber,parameters$AR,parameters$gamma,
-              pch=16,color=cols,
-              angle=55)
-sp3d$points3d(species$Median.Camber,species$Median.Aspect.Ratio,species$gamma,
-              pch=23)
-
-
-cols <- myColorRamp(c("blue","red"), parameters$CLCD, range(parameters$CLCD))
-plot(parameters$Camber,parameters$AR,col=cols,pch=16)
-scols<-myColorRamp(c("blue","red"), species$CLCD, range(parameters$CLCD))
-points(species$Median.Camber,species$Median.Aspect.Ratio,bg=scols,col=NA,pch=23)
-
-points(species$Median.Camber[species$type_list=="raptor"],
-       species$Median.Aspect.Ratio[species$type_list=="raptor"],
-       col="orange",pch=23)
-
-points(species$Median.Camber[species$type_list=="song"],
-       species$Median.Aspect.Ratio[species$type_list=="song"],
-       col="yellow",pch=23)
-
-points(species$Median.Camber[species$species_list=="Cathartes_aura"],
-       species$Median.Aspect.Ratio[species$species_list=="Cathartes_aura"],
-       col="orange",pch=23,cex=2)
-
-albatross<-data.frame(Camber=0.10484,AR=11.5)
-points(albatross$Camber,albatross$AR,pch=23,cex=2.5)
-  
   
 
