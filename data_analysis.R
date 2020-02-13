@@ -117,6 +117,17 @@ parameters$ARnumber<-as.numeric(parameters$ARFac)
 summary(parameters) #Summarize data
 parameters<-parameters[order(as.character(parameters$CamberFac)),]
 
+#### For running gpc ####
+runs<-parameters[parameters$Camber==levels.Camber[9],]
+nrow(parameters[parameters$Camber==levels.Camber[9],])
+
+progress<-0
+for(i in 1:8){
+  progress<-progress+nrow(parameters[parameters$Camber==levels.Camber[i],])
+}
+progress/681
+
+
 #### Allocating space in data frame ####
 parameters$CLCD<-rep(NA,nrow(parameters))
 parameters$Caoa<-rep(NA,nrow(parameters))

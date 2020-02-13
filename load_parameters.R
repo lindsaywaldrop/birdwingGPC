@@ -3,6 +3,14 @@ rm(list=ls())
 
 setwd("~/Dropbox (Chapman)/wing_gPC/birdwingGPC") # Sets working directory
 
+# Functions
+calcAR<-function(AR.new,C){0.5*AR.new*C} # Calculates wing length from aspect ratio
+calcSpeeds<-function(Re,C){  # Calculates air speed from Reynolds number
+  nu=1.5e-05
+  return((Re*nu)/C)
+} 
+
+
 
 ##### Loading Parameters ##### 
 
@@ -20,7 +28,8 @@ levels618.AR<-levels(inputs681$ARFac)
 levels1233.AR<-levels(inputs1233$ARFac)
 
 inputs681$CamberFac<-as.factor(inputs681$Camber)
-levels.camber<-levels(inputs681$CamberFac)
+levels.Camber<-levels(inputs681$CamberFac)
+
 ##### Generating Airfoil dat files #####
 
 ASwing<-read.csv("AS6091.csv",header=TRUE)  
@@ -33,7 +42,7 @@ cat("AS6091\ camber=",camber,"\n")
 sink()
 write.table(ASwing,file="AS6091_base.dat",append=TRUE,col.names=FALSE,row.names=FALSE,sep="  ")
 
-# Calculates new camber and moves points appropriately
+# Calculates new camber and moves points appropriately for flatwing and panelwing
 for (i in 1:length(levels.Camber)){
   camber.new<-as.numeric(as.character(levels.Camber[i]))
   message("camber ",i,"= ",camber.new)
@@ -52,23 +61,44 @@ for (i in 1:length(levels.Camber)){
 }
 
 
+basedir<-"~/Dropbox (Chapman)/wing_gPC/birdwingGPC/taperwingGPC/" # Sets working director
+# Calculates new camber and moves points appropriately for taperwing
+for (i in 2:length(levels.Camber)){
+  setwd(paste(basedir,"Cam",i,"/",sep=""))
+  camber.new<-as.numeric(as.character(levels.Camber[i]))
+  camber.end<-as.numeric(as.character(levels.Camber[1]))
+  message("camber ",i,"= ",camber.new,"; camber end = ",camber.end)
+  slope=(camber.new-camber.end)/(0.2-1.0)
+  yint=-slope*0.2+camber.new
+  AS.new_y1<-(ASwing$y-min(ASwing$y))*camber.new/(max(ASwing$y)-min(ASwing$y))
+  #AS.new_y5<-(ASwing$y-min(ASwing$y))*camber.end/(max(ASwing$y)-min(ASwing$y))
+  plot(0,0,ylim=range(AS.new_y1),xlim=range(ASwing$x))
+  colors=c("red","orange","yellow","green","blue")
+  for (j in 1:5){
+    if(j==5){camber.now<-camber.end} else{camber.now<-slope*(j*0.2)+yint}
+    AS.new_y<-(ASwing$y-min(ASwing$y))*camber.now/(max(ASwing$y)-min(ASwing$y))
+    ASnew<-data.frame(x=ASwing$x,y=AS.new_y)
+    lines(ASwing$x,AS.new_y,col=colors[j])
+    camber.check<-(max(AS.new_y)-min(AS.new_y))/(max(ASwing$x)-min(ASwing$x))
+    message("Camber ",i," Pos ",j,": ",all.equal(camber.now,camber.check))
+    sink(paste("AS6091_cam",i,"_pos_",j*0.2,".dat",sep=""))
+    cat("AS6091\ camber=",camber.now,"\n")
+    sink()
+    #write.table(c("wing"),file="birdwing.dat",append=FALSE,col.names=FALSE,row.names=FALSE,sep="  ")
+    write.table(ASnew,file=paste("AS6091_cam",i,"_pos_",j*0.2,".dat",sep=""),append=TRUE,col.names=FALSE,row.names=FALSE,sep="  ")
+  }
+}
 
 
 ##### Other Random Calculations, scratch work ####
 
-# Functions
-calcAR<-function(AR.new,C){0.5*AR.new*C} # Calculates wing length from aspect ratio
-calcSpeeds<-function(Re,C){  # Calculates air speed from Reynolds number
-  nu=1.5e-05
-  return((Re*nu)/C)
-} 
 
 calcAR(as.numeric(as.character(levels.AR[1])),0.1)
 
 calcSpeeds(as.numeric(as.character(levels.Re[1])),0.1)
 
-runs<-parameters[parameters$Camber==levels.Camber[9],]
-nrow(parameters[parameters$Camber==levels.Camber[23],])
+runs<-inputs681[inputs681$Camber==levels.Camber[2],]
+nrow(inputs681[inputs681$Camber==levels.Camber[22],])
 
 progress<-0
 for(i in 1:8){
