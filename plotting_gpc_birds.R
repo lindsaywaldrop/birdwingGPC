@@ -110,17 +110,18 @@ species$slopeyint<-species$slope+species$yint
 w=5.25
 h=5
 # CLCD
-i=75
+i=85
 for (i in seq(0,180,by=1)){
   #pdf(file = paste("animCLCD/CLCD",i,".pdf",sep=""))
   png(filename=paste("animCLCD/CLCD",i,".png",sep=""),width=w,height=h,unit="in",res=200)
-  gpc3d.object<-gpc3d(parameters,"Camber","AR","CLCD",i,c("steelblue","white"))
+  gpc3d.object<-gpc3d(parameters,"Camber","AR","maxL.Vzaoa",i,c("#440154FF","#31688EFF","#35B779FF","#FDE725FF"))
+  gpc3d.object<-gpc3d(parameters,"AR","Camber","maxL.5aoa",i,c("steelblue","red"))
   #birdsadd3D(gpc3d.object,species,"Median.Camber","Median.Aspect.Ratio","CLCD")
   gpc3d.object
   dev.off()
 }
 
-gpc3d2(parameters,"Camber","Re","AR","CLCD",55,0.8,0.1,c("yellow","orange","red"))
+gpc3d2(parameters,"Camber","Re","AR","CLCD",55,0.8,0.1,c("#440154FF","#31688EFF","#35B779FF","#FDE725FF"))
 
 # Max Angle of Attack
 for (i in seq(0,180,by=10)){
@@ -140,7 +141,7 @@ for (i in seq(0,180,by=10)){
   dev.off()
 }
 
-gpc3d2(parameters,"Camber","Re","AR","gamma",55,0.8,0.1,c("yellow","orange","red"))
+gpc3d2(parameters,"Camber","Re","AR","Vz",55,0.8,0.1,c("yellow","orange","red"))
 
 # Efficiency
 for (i in seq(0,180,by=10)){
@@ -177,32 +178,35 @@ gpc3d(parameters,"Camber","AR","yint",70,c("yellow","orange","red"))
 #### GGPLOTS ####
 
 point2dplot(parameters,species,"gamma",c("blue","grey","red"))
-point2dplot(parameters,species,"CLCD",c("yellow","orange","red"))
+point2dplot(parameters,species,"Vz",c("yellow","orange","red"))
 point2dplot(parameters,species,"Caoa",c("blue","white","red"))
 point2dplot(parameters,species,"Efficiency",c("blue","white","red"))
 point2dplot(parameters,species,"slopeyint",c("blue","white","red"))
 
 #### Other Trash ####
+ 
+cols <- myColorRamp(c("blue","green","yellow","red"), parameters$Vz, range(parameters$Vz))
+cols <- myColorRamp(c("blue","green","yellow","red"), parameters$maxL.Vzaoa, range(parameters$maxL.Vzaoa))
+cols <- myColorRamp(c("#440154FF","#31688EFF","#35B779FF","#FDE725FF"), parameters$maxL.Vzaoa, range(parameters$maxL.Vzaoa))
 
-cols <- myColorRamp(c("blue","red"), parameters$CLCD, range(parameters$CLCD))
-plot(parameters$Camber,parameters$AR,col=cols,pch=16)
+plot(parameters$AR,parameters$Camber,col=cols,pch=16)
 scols<-myColorRamp(c("blue","red"), species$CLCD, range(parameters$CLCD))
-points(species$Median.Camber,species$Median.Aspect.Ratio,bg=scols,col=NA,pch=23)
+points(species$Median.Aspect.Ratio,species$Median.Camber,bg=scols,col=NA,pch=23)
 
-points(species$Median.Camber[species$type_list=="raptor"],
-       species$Median.Aspect.Ratio[species$type_list=="raptor"],
+points(species$Median.Aspect.Ratio[species$type_list=="raptor"],
+       species$Median.Camber[species$type_list=="raptor"],
        col="orange",pch=23)
 
-points(species$Median.Camber[species$type_list=="song"],
-       species$Median.Aspect.Ratio[species$type_list=="song"],
-       col="yellow",pch=23)
+points(species$Median.Aspect.Ratio[species$type_list=="song"],
+       species$Median.Camber[species$type_list=="song"],
+       col="black",pch=23)
 
-points(species$Median.Camber[species$species_list=="Cathartes_aura"],
-       species$Median.Aspect.Ratio[species$species_list=="Cathartes_aura"],
+points(species$Median.Aspect.Ratio[species$species_list=="Cathartes_aura"],
+       species$Median.Camber[species$species_list=="Cathartes_aura"],
        col="orange",pch=23,cex=2)
 
 albatross<-data.frame(Camber=0.10484,AR=11.5)
-points(albatross$Camber,albatross$AR,pch=23,cex=2)
+points(albatross$AR,albatross$Camber,pch=23,cex=2)
 
 
 ggplot(parameters,aes(AR,Camber,color=CLCD))+geom_point(size=3)+

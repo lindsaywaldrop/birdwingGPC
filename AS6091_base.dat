@@ -1,7 +1,895 @@
 
 > cat("AS6091\ camber=",camber,"\n")
-[1] 110.741
-[1] 110.741
-[1] 553.7052
-[1] 553.7052
-[1] 553.7052
+[1] 5
+[1] 57
+[1] 57
+       AR             Camber               Re               ARFac           CamberFac         ReFac    
+ Min.   : 3.229   Min.   :0.005089   Min.   : 14835   7.5      :169   0.1        :169   105000   :169  
+ 1st Qu.: 4.902   1st Qu.:0.042265   1st Qu.: 50152   4.9019238: 97   0.042264973: 97   50151.724: 97  
+ Median : 7.500   Median :0.100000   Median :105000   10.098076: 97   0.15773503 : 97   159848.28: 97  
+ Mean   : 7.500   Mean   :0.100000   Mean   :105000   4.014315 : 57   0.022540333: 57   31413.316: 57  
+ 3rd Qu.:10.098   3rd Qu.:0.157735   3rd Qu.:159848   10.985685: 57   0.17745967 : 57   178586.68: 57  
+ Max.   :11.771   Max.   :0.194911   Max.   :195165   3.6248866: 29   0.013886369: 29   23192.05 : 29  
+                                                      (Other)  :175   (Other)    :175   (Other)  :175  
+     speeds          Lengths          ARnumber 
+ Min.   : 2.225   Min.   :0.1787   Min.   : 1  
+ 1st Qu.: 7.523   1st Qu.:0.2713   1st Qu.: 8  
+ Median :15.750   Median :0.4151   Median :13  
+ Mean   :15.750   Mean   :0.4151   Mean   :13  
+ 3rd Qu.:23.977   3rd Qu.:0.5589   3rd Qu.:18  
+ Max.   :29.275   Max.   :0.6515   Max.   :25  
+                                               
+[1] 13
+[1] 0.3054332
+       AR             Camber               Re               ARFac           CamberFac         ReFac    
+ Min.   : 3.229   Min.   :0.005089   Min.   : 14835   7.5      :169   0.1        :169   105000   :169  
+ 1st Qu.: 4.902   1st Qu.:0.042265   1st Qu.: 50152   4.9019238: 97   0.042264973: 97   50151.724: 97  
+ Median : 7.500   Median :0.100000   Median :105000   10.098076: 97   0.15773503 : 97   159848.28: 97  
+ Mean   : 7.500   Mean   :0.100000   Mean   :105000   4.014315 : 57   0.022540333: 57   31413.316: 57  
+ 3rd Qu.:10.098   3rd Qu.:0.157735   3rd Qu.:159848   10.985685: 57   0.17745967 : 57   178586.68: 57  
+ Max.   :11.771   Max.   :0.194911   Max.   :195165   3.6248866: 29   0.013886369: 29   23192.05 : 29  
+                                                      (Other)  :175   (Other)    :175   (Other)  :175  
+     speeds          Lengths          ARnumber 
+ Min.   : 2.225   Min.   :0.1787   Min.   : 1  
+ 1st Qu.: 7.523   1st Qu.:0.2713   1st Qu.: 8  
+ Median :15.750   Median :0.4151   Median :13  
+ Mean   :15.750   Mean   :0.4151   Mean   :13  
+ 3rd Qu.:23.977   3rd Qu.:0.5589   3rd Qu.:18  
+ Max.   :29.275   Max.   :0.6515   Max.   :25  
+                                               
+[1] 13
+[1] 0.3054332
+       AR             Camber               Re               ARFac           CamberFac         ReFac    
+ Min.   : 3.229   Min.   :0.005089   Min.   : 14835   7.5      :169   0.1        :169   105000   :169  
+ 1st Qu.: 4.902   1st Qu.:0.042265   1st Qu.: 50152   4.9019238: 97   0.042264973: 97   50151.724: 97  
+ Median : 7.500   Median :0.100000   Median :105000   10.098076: 97   0.15773503 : 97   159848.28: 97  
+ Mean   : 7.500   Mean   :0.100000   Mean   :105000   4.014315 : 57   0.022540333: 57   31413.316: 57  
+ 3rd Qu.:10.098   3rd Qu.:0.157735   3rd Qu.:159848   10.985685: 57   0.17745967 : 57   178586.68: 57  
+ Max.   :11.771   Max.   :0.194911   Max.   :195165   3.6248866: 29   0.013886369: 29   23192.05 : 29  
+                                                      (Other)  :175   (Other)    :175   (Other)  :175  
+     speeds          Lengths          ARnumber 
+ Min.   : 2.225   Min.   :0.1787   Min.   : 1  
+ 1st Qu.: 7.523   1st Qu.:0.2713   1st Qu.: 8  
+ Median :15.750   Median :0.4151   Median :13  
+ Mean   :15.750   Mean   :0.4151   Mean   :13  
+ 3rd Qu.:23.977   3rd Qu.:0.5589   3rd Qu.:18  
+ Max.   :29.275   Max.   :0.6515   Max.   :25  
+                                               
+[1] 13
+[1] 0.3054332
+       AR             Camber               Re               ARFac           CamberFac         ReFac    
+ Min.   : 3.229   Min.   :0.005089   Min.   : 14835   7.5      :169   0.1        :169   105000   :169  
+ 1st Qu.: 4.902   1st Qu.:0.042265   1st Qu.: 50152   4.9019238: 97   0.042264973: 97   50151.724: 97  
+ Median : 7.500   Median :0.100000   Median :105000   10.098076: 97   0.15773503 : 97   159848.28: 97  
+ Mean   : 7.500   Mean   :0.100000   Mean   :105000   4.014315 : 57   0.022540333: 57   31413.316: 57  
+ 3rd Qu.:10.098   3rd Qu.:0.157735   3rd Qu.:159848   10.985685: 57   0.17745967 : 57   178586.68: 57  
+ Max.   :11.771   Max.   :0.194911   Max.   :195165   3.6248866: 29   0.013886369: 29   23192.05 : 29  
+                                                      (Other)  :175   (Other)    :175   (Other)  :175  
+     speeds          Lengths          ARnumber 
+ Min.   : 2.225   Min.   :0.1787   Min.   : 1  
+ 1st Qu.: 7.523   1st Qu.:0.2713   1st Qu.: 8  
+ Median :15.750   Median :0.4151   Median :13  
+ Mean   :15.750   Mean   :0.4151   Mean   :13  
+ 3rd Qu.:23.977   3rd Qu.:0.5589   3rd Qu.:18  
+ Max.   :29.275   Max.   :0.6515   Max.   :25  
+                                               
+[1] 13
+[1] 0.3054332
+       AR             Camber               Re               ARFac           CamberFac         ReFac    
+ Min.   : 3.229   Min.   :0.005089   Min.   : 14835   7.5      :169   0.1        :169   105000   :169  
+ 1st Qu.: 4.902   1st Qu.:0.042265   1st Qu.: 50152   4.9019238: 97   0.042264973: 97   50151.724: 97  
+ Median : 7.500   Median :0.100000   Median :105000   10.098076: 97   0.15773503 : 97   159848.28: 97  
+ Mean   : 7.500   Mean   :0.100000   Mean   :105000   4.014315 : 57   0.022540333: 57   31413.316: 57  
+ 3rd Qu.:10.098   3rd Qu.:0.157735   3rd Qu.:159848   10.985685: 57   0.17745967 : 57   178586.68: 57  
+ Max.   :11.771   Max.   :0.194911   Max.   :195165   3.6248866: 29   0.013886369: 29   23192.05 : 29  
+                                                      (Other)  :175   (Other)    :175   (Other)  :175  
+     speeds          Lengths          ARnumber 
+ Min.   : 2.225   Min.   :0.1787   Min.   : 1  
+ 1st Qu.: 7.523   1st Qu.:0.2713   1st Qu.: 8  
+ Median :15.750   Median :0.4151   Median :13  
+ Mean   :15.750   Mean   :0.4151   Mean   :13  
+ 3rd Qu.:23.977   3rd Qu.:0.5589   3rd Qu.:18  
+ Max.   :29.275   Max.   :0.6515   Max.   :25  
+                                               
+[1] 13
+[1] 0.3054332
+       AR             Camber               Re               ARFac           CamberFac         ReFac    
+ Min.   : 3.229   Min.   :0.005089   Min.   : 14835   7.5      :169   0.1        :169   105000   :169  
+ 1st Qu.: 4.902   1st Qu.:0.042265   1st Qu.: 50152   4.9019238: 97   0.042264973: 97   50151.724: 97  
+ Median : 7.500   Median :0.100000   Median :105000   10.098076: 97   0.15773503 : 97   159848.28: 97  
+ Mean   : 7.500   Mean   :0.100000   Mean   :105000   4.014315 : 57   0.022540333: 57   31413.316: 57  
+ 3rd Qu.:10.098   3rd Qu.:0.157735   3rd Qu.:159848   10.985685: 57   0.17745967 : 57   178586.68: 57  
+ Max.   :11.771   Max.   :0.194911   Max.   :195165   3.6248866: 29   0.013886369: 29   23192.05 : 29  
+                                                      (Other)  :175   (Other)    :175   (Other)  :175  
+     speeds          Lengths          ARnumber 
+ Min.   : 2.225   Min.   :0.1787   Min.   : 1  
+ 1st Qu.: 7.523   1st Qu.:0.2713   1st Qu.: 8  
+ Median :15.750   Median :0.4151   Median :13  
+ Mean   :15.750   Mean   :0.4151   Mean   :13  
+ 3rd Qu.:23.977   3rd Qu.:0.5589   3rd Qu.:18  
+ Max.   :29.275   Max.   :0.6515   Max.   :25  
+                                               
+[1] 13
+[1] 0.3054332
+       AR             Camber               Re               ARFac           CamberFac         ReFac    
+ Min.   : 3.229   Min.   :0.005089   Min.   : 14835   7.5      :169   0.1        :169   105000   :169  
+ 1st Qu.: 4.902   1st Qu.:0.042265   1st Qu.: 50152   4.9019238: 97   0.042264973: 97   50151.724: 97  
+ Median : 7.500   Median :0.100000   Median :105000   10.098076: 97   0.15773503 : 97   159848.28: 97  
+ Mean   : 7.500   Mean   :0.100000   Mean   :105000   4.014315 : 57   0.022540333: 57   31413.316: 57  
+ 3rd Qu.:10.098   3rd Qu.:0.157735   3rd Qu.:159848   10.985685: 57   0.17745967 : 57   178586.68: 57  
+ Max.   :11.771   Max.   :0.194911   Max.   :195165   3.6248866: 29   0.013886369: 29   23192.05 : 29  
+                                                      (Other)  :175   (Other)    :175   (Other)  :175  
+     speeds          Lengths          ARnumber 
+ Min.   : 2.225   Min.   :0.1787   Min.   : 1  
+ 1st Qu.: 7.523   1st Qu.:0.2713   1st Qu.: 8  
+ Median :15.750   Median :0.4151   Median :13  
+ Mean   :15.750   Mean   :0.4151   Mean   :13  
+ 3rd Qu.:23.977   3rd Qu.:0.5589   3rd Qu.:18  
+ Max.   :29.275   Max.   :0.6515   Max.   :25  
+                                               
+[1] 13
+[1] 0.3054332
+       AR             Camber               Re               ARFac           CamberFac         ReFac    
+ Min.   : 3.229   Min.   :0.005089   Min.   : 14835   7.5      :169   0.1        :169   105000   :169  
+ 1st Qu.: 4.902   1st Qu.:0.042265   1st Qu.: 50152   4.9019238: 97   0.042264973: 97   50151.724: 97  
+ Median : 7.500   Median :0.100000   Median :105000   10.098076: 97   0.15773503 : 97   159848.28: 97  
+ Mean   : 7.500   Mean   :0.100000   Mean   :105000   4.014315 : 57   0.022540333: 57   31413.316: 57  
+ 3rd Qu.:10.098   3rd Qu.:0.157735   3rd Qu.:159848   10.985685: 57   0.17745967 : 57   178586.68: 57  
+ Max.   :11.771   Max.   :0.194911   Max.   :195165   3.6248866: 29   0.013886369: 29   23192.05 : 29  
+                                                      (Other)  :175   (Other)    :175   (Other)  :175  
+     speeds          Lengths          ARnumber 
+ Min.   : 2.225   Min.   :0.1787   Min.   : 1  
+ 1st Qu.: 7.523   1st Qu.:0.2713   1st Qu.: 8  
+ Median :15.750   Median :0.4151   Median :13  
+ Mean   :15.750   Mean   :0.4151   Mean   :13  
+ 3rd Qu.:23.977   3rd Qu.:0.5589   3rd Qu.:18  
+ Max.   :29.275   Max.   :0.6515   Max.   :25  
+                                               
+       AR             Camber               Re               ARFac           CamberFac         ReFac    
+ Min.   : 3.229   Min.   :0.005089   Min.   : 14835   7.5      :169   0.1        :169   105000   :169  
+ 1st Qu.: 4.902   1st Qu.:0.042265   1st Qu.: 50152   4.9019238: 97   0.042264973: 97   50151.724: 97  
+ Median : 7.500   Median :0.100000   Median :105000   10.098076: 97   0.15773503 : 97   159848.28: 97  
+ Mean   : 7.500   Mean   :0.100000   Mean   :105000   4.014315 : 57   0.022540333: 57   31413.316: 57  
+ 3rd Qu.:10.098   3rd Qu.:0.157735   3rd Qu.:159848   10.985685: 57   0.17745967 : 57   178586.68: 57  
+ Max.   :11.771   Max.   :0.194911   Max.   :195165   3.6248866: 29   0.013886369: 29   23192.05 : 29  
+                                                      (Other)  :175   (Other)    :175   (Other)  :175  
+     speeds          Lengths          ARnumber 
+ Min.   : 2.225   Min.   :0.1787   Min.   : 1  
+ 1st Qu.: 7.523   1st Qu.:0.2713   1st Qu.: 8  
+ Median :15.750   Median :0.4151   Median :13  
+ Mean   :15.750   Mean   :0.4151   Mean   :13  
+ 3rd Qu.:23.977   3rd Qu.:0.5589   3rd Qu.:18  
+ Max.   :29.275   Max.   :0.6515   Max.   :25  
+                                               
+       AR             Camber               Re               ARFac           CamberFac         ReFac    
+ Min.   : 3.229   Min.   :0.005089   Min.   : 14835   7.5      :169   0.1        :169   105000   :169  
+ 1st Qu.: 4.902   1st Qu.:0.042265   1st Qu.: 50152   4.9019238: 97   0.042264973: 97   50151.724: 97  
+ Median : 7.500   Median :0.100000   Median :105000   10.098076: 97   0.15773503 : 97   159848.28: 97  
+ Mean   : 7.500   Mean   :0.100000   Mean   :105000   4.014315 : 57   0.022540333: 57   31413.316: 57  
+ 3rd Qu.:10.098   3rd Qu.:0.157735   3rd Qu.:159848   10.985685: 57   0.17745967 : 57   178586.68: 57  
+ Max.   :11.771   Max.   :0.194911   Max.   :195165   3.6248866: 29   0.013886369: 29   23192.05 : 29  
+                                                      (Other)  :175   (Other)    :175   (Other)  :175  
+     speeds          Lengths          ARnumber 
+ Min.   : 2.225   Min.   :0.1787   Min.   : 1  
+ 1st Qu.: 7.523   1st Qu.:0.2713   1st Qu.: 8  
+ Median :15.750   Median :0.4151   Median :13  
+ Mean   :15.750   Mean   :0.4151   Mean   :13  
+ 3rd Qu.:23.977   3rd Qu.:0.5589   3rd Qu.:18  
+ Max.   :29.275   Max.   :0.6515   Max.   :25  
+                                               
+[1] 13
+[1] 0.3054332
+$xyz.convert
+function (x, y = NULL, z = NULL) 
+{
+    xyz <- xyz.coords(x, y, z)
+    if (angle > 2) {
+        temp <- xyz$x
+        xyz$x <- xyz$y
+        xyz$y <- temp
+    }
+    y <- (xyz$y - y.add)/y.scal
+    return(list(x = xyz$x/x.scal + yx.f * y, y = xyz$z/z.scal + 
+        yz.f * y))
+}
+<bytecode: 0x7fe2c760b790>
+<environment: 0x7fe2c70808c8>
+
+$points3d
+function (x, y = NULL, z = NULL, type = "p", ...) 
+{
+    xyz <- xyz.coords(x, y, z)
+    if (angle > 2) {
+        temp <- xyz$x
+        xyz$x <- xyz$y
+        xyz$y <- temp
+    }
+    y2 <- (xyz$y - y.add)/y.scal
+    x <- xyz$x/x.scal + yx.f * y2
+    y <- xyz$z/z.scal + yz.f * y2
+    mem.par <- par(mar = mar, usr = usr)
+    if (type == "h") {
+        y2 <- z.min + yz.f * y2
+        segments(x, y, x, y2, ...)
+        points(x, y, type = "p", ...)
+    }
+    else points(x, y, type = type, ...)
+}
+<bytecode: 0x7fe2c760d2e8>
+<environment: 0x7fe2c70808c8>
+
+$plane3d
+function (Intercept, x.coef = NULL, y.coef = NULL, lty = "dashed", 
+    lty.box = NULL, draw_lines = TRUE, draw_polygon = FALSE, 
+    polygon_args = list(border = NA, col = rgb(0, 0, 0, 0.2)), 
+    ...) 
+{
+    if (!is.atomic(Intercept) && !is.null(coef(Intercept))) {
+        Intercept <- coef(Intercept)
+        if (!("(Intercept)" %in% names(Intercept))) 
+            Intercept <- c(0, Intercept)
+    }
+    if (is.null(lty.box)) 
+        lty.box <- lty
+    if (is.null(x.coef) && length(Intercept) == 3) {
+        x.coef <- Intercept[if (angle > 2) 
+            3
+        else 2]
+        y.coef <- Intercept[if (angle > 2) 
+            2
+        else 3]
+        Intercept <- Intercept[1]
+    }
+    mem.par <- par(mar = mar, usr = usr)
+    x <- x.min:x.max
+    y <- 0:y.max
+    ltya <- c(lty.box, rep(lty, length(x) - 2), lty.box)
+    x.coef <- x.coef * x.scal
+    z1 <- (Intercept + x * x.coef + y.add * y.coef)/z.scal
+    z2 <- (Intercept + x * x.coef + (y.max * y.scal + y.add) * 
+        y.coef)/z.scal
+    if (draw_polygon) 
+        do.call("polygon", c(list(c(x.min, x.min + y.max * yx.f, 
+            x.max + y.max * yx.f, x.max), c(z1[1], z2[1] + yz.f * 
+            y.max, z2[length(z2)] + yz.f * y.max, z1[length(z1)])), 
+            polygon_args))
+    if (draw_lines) 
+        segments(x, z1, x + y.max * yx.f, z2 + yz.f * y.max, 
+            lty = ltya, ...)
+    ltya <- c(lty.box, rep(lty, length(y) - 2), lty.box)
+    y.coef <- (y * y.scal + y.add) * y.coef
+    z1 <- (Intercept + x.min * x.coef + y.coef)/z.scal
+    z2 <- (Intercept + x.max * x.coef + y.coef)/z.scal
+    if (draw_lines) 
+        segments(x.min + y * yx.f, z1 + y * yz.f, x.max + y * 
+            yx.f, z2 + y * yz.f, lty = ltya, ...)
+}
+<bytecode: 0x7fe2c7428930>
+<environment: 0x7fe2c70808c8>
+
+$box3d
+function (...) 
+{
+    mem.par <- par(mar = mar, usr = usr)
+    lines(c(x.min, x.max), c(z.max, z.max), ...)
+    lines(c(0, y.max * yx.f) + x.max, c(0, y.max * yz.f) + z.max, 
+        ...)
+    lines(c(0, y.max * yx.f) + x.min, c(0, y.max * yz.f) + z.max, 
+        ...)
+    lines(c(x.max, x.max), c(z.min, z.max), ...)
+    lines(c(x.min, x.min), c(z.min, z.max), ...)
+    lines(c(x.min, x.max), c(z.min, z.min), ...)
+}
+<bytecode: 0x7fe2c734f608>
+<environment: 0x7fe2c70808c8>
+
+$contour3d
+function (f, x.count = 10, y.count = 10, type = "l", lty = "24", 
+    x.resolution = 50, y.resolution = 50, ...) 
+{
+    if (class(f) == "lm") {
+        vars <- all.vars(formula(f))
+    }
+    else vars <- c("z", "x", "y")
+    for (x1 in seq(x.range.fix[1], x.range.fix[2], length = x.count)) {
+        d <- data.frame(x1, seq(y.range.fix[1], y.range.fix[2], 
+            length = y.resolution))
+        names(d) <- vars[-1]
+        if (class(f) == "lm") {
+            d[vars[1]] <- predict(f, newdata = d)
+        }
+        else d[vars[1]] <- f(d[[1]], d[[2]])
+        xyz <- xyz.coords(d)
+        if (angle > 2) {
+            temp <- xyz$x
+            xyz$x <- xyz$y
+            xyz$y <- temp
+        }
+        y2 <- (xyz$y - y.add)/y.scal
+        x <- xyz$x/x.scal + yx.f * y2
+        y <- xyz$z/z.scal + yz.f * y2
+        mem.par <- par(mar = mar, usr = usr)
+        if (type == "h") {
+            y2 <- z.min + yz.f * y2
+            segments(x, y, x, y2, ...)
+            points(x, y, type = "p", ...)
+        }
+        else points(x, y, type = type, lty = lty, ...)
+    }
+    for (x2 in seq(y.range.fix[1], y.range.fix[2], length = y.count)) {
+        d <- data.frame(seq(x.range.fix[1], x.range.fix[2], length = x.resolution), 
+            x2)
+        names(d) <- vars[-1]
+        if (class(f) == "lm") {
+            d[vars[1]] <- predict(f, newdata = d)
+        }
+        else d[vars[1]] <- f(d[[1]], d[[2]])
+        xyz <- xyz.coords(d)
+        if (angle > 2) {
+            temp <- xyz$x
+            xyz$x <- xyz$y
+            xyz$y <- temp
+        }
+        y2 <- (xyz$y - y.add)/y.scal
+        x <- xyz$x/x.scal + yx.f * y2
+        y <- xyz$z/z.scal + yz.f * y2
+        mem.par <- par(mar = mar, usr = usr)
+        if (type == "h") {
+            y2 <- z.min + yz.f * y2
+            segments(x, y, x, y2, ...)
+            points(x, y, type = "p", ...)
+        }
+        else points(x, y, type = type, lty = lty, ...)
+    }
+}
+<bytecode: 0x7fe2c7345560>
+<environment: 0x7fe2c70808c8>
+
+$par.mar
+$par.mar$mar
+[1] 5.1 3.1 4.1 3.1
+
+
+$xyz.convert
+function (x, y = NULL, z = NULL) 
+{
+    xyz <- xyz.coords(x, y, z)
+    if (angle > 2) {
+        temp <- xyz$x
+        xyz$x <- xyz$y
+        xyz$y <- temp
+    }
+    y <- (xyz$y - y.add)/y.scal
+    return(list(x = xyz$x/x.scal + yx.f * y, y = xyz$z/z.scal + 
+        yz.f * y))
+}
+<bytecode: 0x7fe2c760b790>
+<environment: 0x7fe2c740efa0>
+
+$points3d
+function (x, y = NULL, z = NULL, type = "p", ...) 
+{
+    xyz <- xyz.coords(x, y, z)
+    if (angle > 2) {
+        temp <- xyz$x
+        xyz$x <- xyz$y
+        xyz$y <- temp
+    }
+    y2 <- (xyz$y - y.add)/y.scal
+    x <- xyz$x/x.scal + yx.f * y2
+    y <- xyz$z/z.scal + yz.f * y2
+    mem.par <- par(mar = mar, usr = usr)
+    if (type == "h") {
+        y2 <- z.min + yz.f * y2
+        segments(x, y, x, y2, ...)
+        points(x, y, type = "p", ...)
+    }
+    else points(x, y, type = type, ...)
+}
+<bytecode: 0x7fe2c760d2e8>
+<environment: 0x7fe2c740efa0>
+
+$plane3d
+function (Intercept, x.coef = NULL, y.coef = NULL, lty = "dashed", 
+    lty.box = NULL, draw_lines = TRUE, draw_polygon = FALSE, 
+    polygon_args = list(border = NA, col = rgb(0, 0, 0, 0.2)), 
+    ...) 
+{
+    if (!is.atomic(Intercept) && !is.null(coef(Intercept))) {
+        Intercept <- coef(Intercept)
+        if (!("(Intercept)" %in% names(Intercept))) 
+            Intercept <- c(0, Intercept)
+    }
+    if (is.null(lty.box)) 
+        lty.box <- lty
+    if (is.null(x.coef) && length(Intercept) == 3) {
+        x.coef <- Intercept[if (angle > 2) 
+            3
+        else 2]
+        y.coef <- Intercept[if (angle > 2) 
+            2
+        else 3]
+        Intercept <- Intercept[1]
+    }
+    mem.par <- par(mar = mar, usr = usr)
+    x <- x.min:x.max
+    y <- 0:y.max
+    ltya <- c(lty.box, rep(lty, length(x) - 2), lty.box)
+    x.coef <- x.coef * x.scal
+    z1 <- (Intercept + x * x.coef + y.add * y.coef)/z.scal
+    z2 <- (Intercept + x * x.coef + (y.max * y.scal + y.add) * 
+        y.coef)/z.scal
+    if (draw_polygon) 
+        do.call("polygon", c(list(c(x.min, x.min + y.max * yx.f, 
+            x.max + y.max * yx.f, x.max), c(z1[1], z2[1] + yz.f * 
+            y.max, z2[length(z2)] + yz.f * y.max, z1[length(z1)])), 
+            polygon_args))
+    if (draw_lines) 
+        segments(x, z1, x + y.max * yx.f, z2 + yz.f * y.max, 
+            lty = ltya, ...)
+    ltya <- c(lty.box, rep(lty, length(y) - 2), lty.box)
+    y.coef <- (y * y.scal + y.add) * y.coef
+    z1 <- (Intercept + x.min * x.coef + y.coef)/z.scal
+    z2 <- (Intercept + x.max * x.coef + y.coef)/z.scal
+    if (draw_lines) 
+        segments(x.min + y * yx.f, z1 + y * yz.f, x.max + y * 
+            yx.f, z2 + y * yz.f, lty = ltya, ...)
+}
+<bytecode: 0x7fe2c7428930>
+<environment: 0x7fe2c740efa0>
+
+$box3d
+function (...) 
+{
+    mem.par <- par(mar = mar, usr = usr)
+    lines(c(x.min, x.max), c(z.max, z.max), ...)
+    lines(c(0, y.max * yx.f) + x.max, c(0, y.max * yz.f) + z.max, 
+        ...)
+    lines(c(0, y.max * yx.f) + x.min, c(0, y.max * yz.f) + z.max, 
+        ...)
+    lines(c(x.max, x.max), c(z.min, z.max), ...)
+    lines(c(x.min, x.min), c(z.min, z.max), ...)
+    lines(c(x.min, x.max), c(z.min, z.min), ...)
+}
+<bytecode: 0x7fe2c734f608>
+<environment: 0x7fe2c740efa0>
+
+$contour3d
+function (f, x.count = 10, y.count = 10, type = "l", lty = "24", 
+    x.resolution = 50, y.resolution = 50, ...) 
+{
+    if (class(f) == "lm") {
+        vars <- all.vars(formula(f))
+    }
+    else vars <- c("z", "x", "y")
+    for (x1 in seq(x.range.fix[1], x.range.fix[2], length = x.count)) {
+        d <- data.frame(x1, seq(y.range.fix[1], y.range.fix[2], 
+            length = y.resolution))
+        names(d) <- vars[-1]
+        if (class(f) == "lm") {
+            d[vars[1]] <- predict(f, newdata = d)
+        }
+        else d[vars[1]] <- f(d[[1]], d[[2]])
+        xyz <- xyz.coords(d)
+        if (angle > 2) {
+            temp <- xyz$x
+            xyz$x <- xyz$y
+            xyz$y <- temp
+        }
+        y2 <- (xyz$y - y.add)/y.scal
+        x <- xyz$x/x.scal + yx.f * y2
+        y <- xyz$z/z.scal + yz.f * y2
+        mem.par <- par(mar = mar, usr = usr)
+        if (type == "h") {
+            y2 <- z.min + yz.f * y2
+            segments(x, y, x, y2, ...)
+            points(x, y, type = "p", ...)
+        }
+        else points(x, y, type = type, lty = lty, ...)
+    }
+    for (x2 in seq(y.range.fix[1], y.range.fix[2], length = y.count)) {
+        d <- data.frame(seq(x.range.fix[1], x.range.fix[2], length = x.resolution), 
+            x2)
+        names(d) <- vars[-1]
+        if (class(f) == "lm") {
+            d[vars[1]] <- predict(f, newdata = d)
+        }
+        else d[vars[1]] <- f(d[[1]], d[[2]])
+        xyz <- xyz.coords(d)
+        if (angle > 2) {
+            temp <- xyz$x
+            xyz$x <- xyz$y
+            xyz$y <- temp
+        }
+        y2 <- (xyz$y - y.add)/y.scal
+        x <- xyz$x/x.scal + yx.f * y2
+        y <- xyz$z/z.scal + yz.f * y2
+        mem.par <- par(mar = mar, usr = usr)
+        if (type == "h") {
+            y2 <- z.min + yz.f * y2
+            segments(x, y, x, y2, ...)
+            points(x, y, type = "p", ...)
+        }
+        else points(x, y, type = type, lty = lty, ...)
+    }
+}
+<bytecode: 0x7fe2c7345560>
+<environment: 0x7fe2c740efa0>
+
+$par.mar
+$par.mar$mar
+[1] 5.1 3.1 4.1 3.1
+
+
+$xyz.convert
+function (x, y = NULL, z = NULL) 
+{
+    xyz <- xyz.coords(x, y, z)
+    if (angle > 2) {
+        temp <- xyz$x
+        xyz$x <- xyz$y
+        xyz$y <- temp
+    }
+    y <- (xyz$y - y.add)/y.scal
+    return(list(x = xyz$x/x.scal + yx.f * y, y = xyz$z/z.scal + 
+        yz.f * y))
+}
+<bytecode: 0x7fe2c760b790>
+<environment: 0x7fe2c4768d80>
+
+$points3d
+function (x, y = NULL, z = NULL, type = "p", ...) 
+{
+    xyz <- xyz.coords(x, y, z)
+    if (angle > 2) {
+        temp <- xyz$x
+        xyz$x <- xyz$y
+        xyz$y <- temp
+    }
+    y2 <- (xyz$y - y.add)/y.scal
+    x <- xyz$x/x.scal + yx.f * y2
+    y <- xyz$z/z.scal + yz.f * y2
+    mem.par <- par(mar = mar, usr = usr)
+    if (type == "h") {
+        y2 <- z.min + yz.f * y2
+        segments(x, y, x, y2, ...)
+        points(x, y, type = "p", ...)
+    }
+    else points(x, y, type = type, ...)
+}
+<bytecode: 0x7fe2c760d2e8>
+<environment: 0x7fe2c4768d80>
+
+$plane3d
+function (Intercept, x.coef = NULL, y.coef = NULL, lty = "dashed", 
+    lty.box = NULL, draw_lines = TRUE, draw_polygon = FALSE, 
+    polygon_args = list(border = NA, col = rgb(0, 0, 0, 0.2)), 
+    ...) 
+{
+    if (!is.atomic(Intercept) && !is.null(coef(Intercept))) {
+        Intercept <- coef(Intercept)
+        if (!("(Intercept)" %in% names(Intercept))) 
+            Intercept <- c(0, Intercept)
+    }
+    if (is.null(lty.box)) 
+        lty.box <- lty
+    if (is.null(x.coef) && length(Intercept) == 3) {
+        x.coef <- Intercept[if (angle > 2) 
+            3
+        else 2]
+        y.coef <- Intercept[if (angle > 2) 
+            2
+        else 3]
+        Intercept <- Intercept[1]
+    }
+    mem.par <- par(mar = mar, usr = usr)
+    x <- x.min:x.max
+    y <- 0:y.max
+    ltya <- c(lty.box, rep(lty, length(x) - 2), lty.box)
+    x.coef <- x.coef * x.scal
+    z1 <- (Intercept + x * x.coef + y.add * y.coef)/z.scal
+    z2 <- (Intercept + x * x.coef + (y.max * y.scal + y.add) * 
+        y.coef)/z.scal
+    if (draw_polygon) 
+        do.call("polygon", c(list(c(x.min, x.min + y.max * yx.f, 
+            x.max + y.max * yx.f, x.max), c(z1[1], z2[1] + yz.f * 
+            y.max, z2[length(z2)] + yz.f * y.max, z1[length(z1)])), 
+            polygon_args))
+    if (draw_lines) 
+        segments(x, z1, x + y.max * yx.f, z2 + yz.f * y.max, 
+            lty = ltya, ...)
+    ltya <- c(lty.box, rep(lty, length(y) - 2), lty.box)
+    y.coef <- (y * y.scal + y.add) * y.coef
+    z1 <- (Intercept + x.min * x.coef + y.coef)/z.scal
+    z2 <- (Intercept + x.max * x.coef + y.coef)/z.scal
+    if (draw_lines) 
+        segments(x.min + y * yx.f, z1 + y * yz.f, x.max + y * 
+            yx.f, z2 + y * yz.f, lty = ltya, ...)
+}
+<bytecode: 0x7fe2c7428930>
+<environment: 0x7fe2c4768d80>
+
+$box3d
+function (...) 
+{
+    mem.par <- par(mar = mar, usr = usr)
+    lines(c(x.min, x.max), c(z.max, z.max), ...)
+    lines(c(0, y.max * yx.f) + x.max, c(0, y.max * yz.f) + z.max, 
+        ...)
+    lines(c(0, y.max * yx.f) + x.min, c(0, y.max * yz.f) + z.max, 
+        ...)
+    lines(c(x.max, x.max), c(z.min, z.max), ...)
+    lines(c(x.min, x.min), c(z.min, z.max), ...)
+    lines(c(x.min, x.max), c(z.min, z.min), ...)
+}
+<bytecode: 0x7fe2c734f608>
+<environment: 0x7fe2c4768d80>
+
+$contour3d
+function (f, x.count = 10, y.count = 10, type = "l", lty = "24", 
+    x.resolution = 50, y.resolution = 50, ...) 
+{
+    if (class(f) == "lm") {
+        vars <- all.vars(formula(f))
+    }
+    else vars <- c("z", "x", "y")
+    for (x1 in seq(x.range.fix[1], x.range.fix[2], length = x.count)) {
+        d <- data.frame(x1, seq(y.range.fix[1], y.range.fix[2], 
+            length = y.resolution))
+        names(d) <- vars[-1]
+        if (class(f) == "lm") {
+            d[vars[1]] <- predict(f, newdata = d)
+        }
+        else d[vars[1]] <- f(d[[1]], d[[2]])
+        xyz <- xyz.coords(d)
+        if (angle > 2) {
+            temp <- xyz$x
+            xyz$x <- xyz$y
+            xyz$y <- temp
+        }
+        y2 <- (xyz$y - y.add)/y.scal
+        x <- xyz$x/x.scal + yx.f * y2
+        y <- xyz$z/z.scal + yz.f * y2
+        mem.par <- par(mar = mar, usr = usr)
+        if (type == "h") {
+            y2 <- z.min + yz.f * y2
+            segments(x, y, x, y2, ...)
+            points(x, y, type = "p", ...)
+        }
+        else points(x, y, type = type, lty = lty, ...)
+    }
+    for (x2 in seq(y.range.fix[1], y.range.fix[2], length = y.count)) {
+        d <- data.frame(seq(x.range.fix[1], x.range.fix[2], length = x.resolution), 
+            x2)
+        names(d) <- vars[-1]
+        if (class(f) == "lm") {
+            d[vars[1]] <- predict(f, newdata = d)
+        }
+        else d[vars[1]] <- f(d[[1]], d[[2]])
+        xyz <- xyz.coords(d)
+        if (angle > 2) {
+            temp <- xyz$x
+            xyz$x <- xyz$y
+            xyz$y <- temp
+        }
+        y2 <- (xyz$y - y.add)/y.scal
+        x <- xyz$x/x.scal + yx.f * y2
+        y <- xyz$z/z.scal + yz.f * y2
+        mem.par <- par(mar = mar, usr = usr)
+        if (type == "h") {
+            y2 <- z.min + yz.f * y2
+            segments(x, y, x, y2, ...)
+            points(x, y, type = "p", ...)
+        }
+        else points(x, y, type = type, lty = lty, ...)
+    }
+}
+<bytecode: 0x7fe2c7345560>
+<environment: 0x7fe2c4768d80>
+
+$par.mar
+$par.mar$mar
+[1] 5.1 3.1 4.1 3.1
+
+
+$xyz.convert
+function (x, y = NULL, z = NULL) 
+{
+    xyz <- xyz.coords(x, y, z)
+    if (angle > 2) {
+        temp <- xyz$x
+        xyz$x <- xyz$y
+        xyz$y <- temp
+    }
+    y <- (xyz$y - y.add)/y.scal
+    return(list(x = xyz$x/x.scal + yx.f * y, y = xyz$z/z.scal + 
+        yz.f * y))
+}
+<bytecode: 0x7fe2c760b790>
+<environment: 0x7fe2c1d15388>
+
+$points3d
+function (x, y = NULL, z = NULL, type = "p", ...) 
+{
+    xyz <- xyz.coords(x, y, z)
+    if (angle > 2) {
+        temp <- xyz$x
+        xyz$x <- xyz$y
+        xyz$y <- temp
+    }
+    y2 <- (xyz$y - y.add)/y.scal
+    x <- xyz$x/x.scal + yx.f * y2
+    y <- xyz$z/z.scal + yz.f * y2
+    mem.par <- par(mar = mar, usr = usr)
+    if (type == "h") {
+        y2 <- z.min + yz.f * y2
+        segments(x, y, x, y2, ...)
+        points(x, y, type = "p", ...)
+    }
+    else points(x, y, type = type, ...)
+}
+<bytecode: 0x7fe2c760d2e8>
+<environment: 0x7fe2c1d15388>
+
+$plane3d
+function (Intercept, x.coef = NULL, y.coef = NULL, lty = "dashed", 
+    lty.box = NULL, draw_lines = TRUE, draw_polygon = FALSE, 
+    polygon_args = list(border = NA, col = rgb(0, 0, 0, 0.2)), 
+    ...) 
+{
+    if (!is.atomic(Intercept) && !is.null(coef(Intercept))) {
+        Intercept <- coef(Intercept)
+        if (!("(Intercept)" %in% names(Intercept))) 
+            Intercept <- c(0, Intercept)
+    }
+    if (is.null(lty.box)) 
+        lty.box <- lty
+    if (is.null(x.coef) && length(Intercept) == 3) {
+        x.coef <- Intercept[if (angle > 2) 
+            3
+        else 2]
+        y.coef <- Intercept[if (angle > 2) 
+            2
+        else 3]
+        Intercept <- Intercept[1]
+    }
+    mem.par <- par(mar = mar, usr = usr)
+    x <- x.min:x.max
+    y <- 0:y.max
+    ltya <- c(lty.box, rep(lty, length(x) - 2), lty.box)
+    x.coef <- x.coef * x.scal
+    z1 <- (Intercept + x * x.coef + y.add * y.coef)/z.scal
+    z2 <- (Intercept + x * x.coef + (y.max * y.scal + y.add) * 
+        y.coef)/z.scal
+    if (draw_polygon) 
+        do.call("polygon", c(list(c(x.min, x.min + y.max * yx.f, 
+            x.max + y.max * yx.f, x.max), c(z1[1], z2[1] + yz.f * 
+            y.max, z2[length(z2)] + yz.f * y.max, z1[length(z1)])), 
+            polygon_args))
+    if (draw_lines) 
+        segments(x, z1, x + y.max * yx.f, z2 + yz.f * y.max, 
+            lty = ltya, ...)
+    ltya <- c(lty.box, rep(lty, length(y) - 2), lty.box)
+    y.coef <- (y * y.scal + y.add) * y.coef
+    z1 <- (Intercept + x.min * x.coef + y.coef)/z.scal
+    z2 <- (Intercept + x.max * x.coef + y.coef)/z.scal
+    if (draw_lines) 
+        segments(x.min + y * yx.f, z1 + y * yz.f, x.max + y * 
+            yx.f, z2 + y * yz.f, lty = ltya, ...)
+}
+<bytecode: 0x7fe2c7428930>
+<environment: 0x7fe2c1d15388>
+
+$box3d
+function (...) 
+{
+    mem.par <- par(mar = mar, usr = usr)
+    lines(c(x.min, x.max), c(z.max, z.max), ...)
+    lines(c(0, y.max * yx.f) + x.max, c(0, y.max * yz.f) + z.max, 
+        ...)
+    lines(c(0, y.max * yx.f) + x.min, c(0, y.max * yz.f) + z.max, 
+        ...)
+    lines(c(x.max, x.max), c(z.min, z.max), ...)
+    lines(c(x.min, x.min), c(z.min, z.max), ...)
+    lines(c(x.min, x.max), c(z.min, z.min), ...)
+}
+<bytecode: 0x7fe2c734f608>
+<environment: 0x7fe2c1d15388>
+
+$contour3d
+function (f, x.count = 10, y.count = 10, type = "l", lty = "24", 
+    x.resolution = 50, y.resolution = 50, ...) 
+{
+    if (class(f) == "lm") {
+        vars <- all.vars(formula(f))
+    }
+    else vars <- c("z", "x", "y")
+    for (x1 in seq(x.range.fix[1], x.range.fix[2], length = x.count)) {
+        d <- data.frame(x1, seq(y.range.fix[1], y.range.fix[2], 
+            length = y.resolution))
+        names(d) <- vars[-1]
+        if (class(f) == "lm") {
+            d[vars[1]] <- predict(f, newdata = d)
+        }
+        else d[vars[1]] <- f(d[[1]], d[[2]])
+        xyz <- xyz.coords(d)
+        if (angle > 2) {
+            temp <- xyz$x
+            xyz$x <- xyz$y
+            xyz$y <- temp
+        }
+        y2 <- (xyz$y - y.add)/y.scal
+        x <- xyz$x/x.scal + yx.f * y2
+        y <- xyz$z/z.scal + yz.f * y2
+        mem.par <- par(mar = mar, usr = usr)
+        if (type == "h") {
+            y2 <- z.min + yz.f * y2
+            segments(x, y, x, y2, ...)
+            points(x, y, type = "p", ...)
+        }
+        else points(x, y, type = type, lty = lty, ...)
+    }
+    for (x2 in seq(y.range.fix[1], y.range.fix[2], length = y.count)) {
+        d <- data.frame(seq(x.range.fix[1], x.range.fix[2], length = x.resolution), 
+            x2)
+        names(d) <- vars[-1]
+        if (class(f) == "lm") {
+            d[vars[1]] <- predict(f, newdata = d)
+        }
+        else d[vars[1]] <- f(d[[1]], d[[2]])
+        xyz <- xyz.coords(d)
+        if (angle > 2) {
+            temp <- xyz$x
+            xyz$x <- xyz$y
+            xyz$y <- temp
+        }
+        y2 <- (xyz$y - y.add)/y.scal
+        x <- xyz$x/x.scal + yx.f * y2
+        y <- xyz$z/z.scal + yz.f * y2
+        mem.par <- par(mar = mar, usr = usr)
+        if (type == "h") {
+            y2 <- z.min + yz.f * y2
+            segments(x, y, x, y2, ...)
+            points(x, y, type = "p", ...)
+        }
+        else points(x, y, type = type, lty = lty, ...)
+    }
+}
+<bytecode: 0x7fe2c7345560>
+<environment: 0x7fe2c1d15388>
+
+$par.mar
+$par.mar$mar
+[1] 5.1 3.1 4.1 3.1
+
+
+[1] 0.6029191 4.5646838
+[1] 0.6029191 4.5646838
+       X             AR             Camber               Re             ARFac          CamberFac       
+ Min.   :  1   Min.   : 3.229   Min.   :0.005089   Min.   : 14835   Min.   : 3.229   Min.   :0.005089  
+ 1st Qu.:171   1st Qu.: 4.902   1st Qu.:0.042265   1st Qu.: 50152   1st Qu.: 4.902   1st Qu.:0.042265  
+ Median :341   Median : 7.500   Median :0.100000   Median :105000   Median : 7.500   Median :0.100000  
+ Mean   :341   Mean   : 7.500   Mean   :0.100000   Mean   :105000   Mean   : 7.500   Mean   :0.100000  
+ 3rd Qu.:511   3rd Qu.:10.098   3rd Qu.:0.157735   3rd Qu.:159848   3rd Qu.:10.098   3rd Qu.:0.157735  
+ Max.   :681   Max.   :11.771   Max.   :0.194911   Max.   :195165   Max.   :11.771   Max.   :0.194911  
+     ReFac            speeds          Lengths          ARnumber       CLCD             Caoa        
+ Min.   : 14835   Min.   : 2.225   Min.   :0.1787   Min.   : 1   Min.   : 4.589   Min.   :-3.0973  
+ 1st Qu.: 50152   1st Qu.: 7.523   1st Qu.:0.2713   1st Qu.: 8   1st Qu.: 8.435   1st Qu.:-0.0385  
+ Median :105000   Median :15.750   Median :0.4151   Median :13   Median :11.091   Median : 0.8498  
+ Mean   :105000   Mean   :15.750   Mean   :0.4151   Mean   :13   Mean   :11.490   Mean   : 0.7135  
+ 3rd Qu.:159848   3rd Qu.:23.977   3rd Qu.:0.5589   3rd Qu.:18   3rd Qu.:14.089   3rd Qu.: 1.4660  
+ Max.   :195165   Max.   :29.275   Max.   :0.6515   Max.   :25   Max.   :21.100   Max.   : 4.0478  
+     slope              yint            gamma             gaoa               Vz        
+ Min.   :0.03304   Min.   :0.1235   Min.   : 2.713   Min.   :-3.0966   Min.   :0.6029  
+ 1st Qu.:0.04915   1st Qu.:0.3695   1st Qu.: 4.060   1st Qu.:-0.0381   1st Qu.:0.9235  
+ Median :0.06449   Median :0.6237   Median : 5.152   Median : 0.8491   Median :1.3470  
+ Mean   :0.06129   Mean   :0.6278   Mean   : 5.650   Mean   : 0.7119   Mean   :1.6601  
+ 3rd Qu.:0.07399   3rd Qu.:0.8487   3rd Qu.: 6.761   3rd Qu.: 1.4650   3rd Qu.:2.2010  
+ Max.   :0.07870   Max.   :1.2788   Max.   :12.294   Max.   : 4.0473   Max.   :4.5647  
+     Vzaoa           slopeyint     
+ Min.   :-0.8279   Min.   :0.1666  
+ 1st Qu.: 2.7958   1st Qu.:0.4344  
+ Median : 3.7118   Median :0.6698  
+ Mean   : 3.7493   Mean   :0.6891  
+ 3rd Qu.: 4.8000   3rd Qu.:0.9027  
+ Max.   : 8.0000   Max.   :1.3550  

@@ -24,11 +24,12 @@ inputs681$ARFac<-as.factor(inputs681$AR)
 inputs1233$ARFac<-as.factor(inputs1233$AR) 
 inputs681$speeds<-calcSpeeds(inputs681$Re,0.1)
 inputs1233$speeds<-calcSpeeds(inputs1233$Re,0.1)
-levels618.AR<-levels(inputs681$ARFac)
+levels681.AR<-levels(inputs681$ARFac)
 levels1233.AR<-levels(inputs1233$ARFac)
 
 inputs681$CamberFac<-as.factor(inputs681$Camber)
 levels.Camber<-levels(inputs681$CamberFac)
+inputs681$ARnumber<-as.numeric(inputs681$ARFac)
 
 ##### Generating Airfoil dat files #####
 
@@ -93,12 +94,12 @@ for (i in 2:length(levels.Camber)){
 ##### Other Random Calculations, scratch work ####
 
 
-calcAR(as.numeric(as.character(levels.AR[1])),0.1)
+calcAR(as.numeric(as.character(levels681.AR[1])),0.1)
 
 calcSpeeds(as.numeric(as.character(levels.Re[1])),0.1)
 
-runs<-inputs681[inputs681$Camber==levels.Camber[2],]
-nrow(inputs681[inputs681$Camber==levels.Camber[22],])
+runs<-inputs681[inputs681$Camber==levels.Camber[5],]
+nrow(inputs681[inputs681$Camber==levels.Camber[2],])
 
 progress<-0
 for(i in 1:8){
