@@ -170,6 +170,8 @@ for(Cambernumber in 1:n){
 }
 
 parameters$maxL.Vzaoa<-parameters$slope*parameters$Vzaoa+parameters$yint
+parameters$maxL.Caoa<-parameters$slope*parameters$Caoa+parameters$yint
+  
 #### Checking and Saving Data ####
 parameters<-parameters[order(as.numeric(row.names(parameters))),]
 message("~.*^*~Completeness check~*^*~.~\n",
