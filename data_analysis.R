@@ -1,6 +1,9 @@
+# Data Analysis script -- calculates output values from the raw simulation data inside panelwing folder
+# To run this file: be sure to set your working directory to the main git directory.
+
 rm(list=ls())
 
-setwd("~/Dropbox (Chapman)/wing_gPC/birdwingGPC/") # Sets working directory
+#setwd("~/Dropbox (Chapman)/wing_gPC/birdwingGPC/") # Sets working directory
 
 #### Functions ####
 
@@ -145,7 +148,8 @@ parameters$Vz<-rep(NA,nrow(parameters))
 parameters$Vzaoa<-rep(NA,nrow(parameters))
 
 #### Main analysis loop ####
-setwd("~/Dropbox (Chapman)/wing_gPC/birdwingGPC/panelwingGPC") # Sets working directory
+base<-getwd()
+setwd(paste(base,"/panelwingGPC",sep="")) # Sets working directory
 
 n<-nlevels(parameters$CamberFac)
 g1<-0
@@ -171,6 +175,7 @@ for(Cambernumber in 1:n){
 
 parameters$maxL.Vzaoa<-parameters$slope*parameters$Vzaoa+parameters$yint
 parameters$maxL.Caoa<-parameters$slope*parameters$Caoa+parameters$yint
+parameters$maxL.diff<-parameters$maxL.Vzaoa-parameters$maxL.Caoa
   
 #### Checking and Saving Data ####
 parameters<-parameters[order(as.numeric(row.names(parameters))),]
