@@ -3,7 +3,7 @@
 #### Required Libraries ####
 library(ggplot2)
 library(scatterplot3d)
-
+library(viridis)
 #### Functions ####
 
 calcRe<-function(S,C){  # Calculates air speed from Reynolds number
@@ -105,6 +105,8 @@ parameters$slopeyint<-parameters$slope+parameters$yint
 species<-read.csv(file=file.choose(),header=TRUE)    
 species$slopeyint<-species$slope+species$yint
 
+data<-read.csv("Combined_birdwing_gpc_data_cwl.csv")
+
 #### 3D Scatterplots ####
 
 w=5.25
@@ -122,6 +124,7 @@ for (i in seq(0,180,by=1)){
 }
 
 gpc3d2(parameters,"Camber","Re","AR","CLCD",55,0.8,0.1,c("#440154FF","#31688EFF","#35B779FF","#FDE725FF"))
+
 
 # Max Angle of Attack
 for (i in seq(0,180,by=10)){
@@ -141,8 +144,9 @@ for (i in seq(0,180,by=10)){
   dev.off()
 }
 
-gpc3d2(parameters,"Camber","Re","AR","Vz",55,0.8,0.1,c("yellow","orange","red"))
 
+gpc3d2(data,"Camber","Re","AR","Vz",55,0.8,0.1,c("#440154FF","#31688EFF","#35B779FF","#FDE725FF"))
+gpc3d2(data,"Camber","Re","AR","Vz.cwl",55,0.8,0.1,c("#440154FF","#31688EFF","#35B779FF","#FDE725FF"))
 # Efficiency
 for (i in seq(0,180,by=10)){
   pdf(file = paste("animEfficiency/Efficiency",i,".pdf",sep=""))
@@ -214,3 +218,65 @@ ggplot(parameters,aes(AR,Camber,color=CLCD))+geom_point(size=3)+
                         limits=range(parameters$CLCD),
                         low=colors[1], mid=colors[2],high=colors[3], 
                         space ="Lab", guide=FALSE)
+
+
+
+
+par(mfrow=c(1,2))
+gpc3d2(data,"Camber","Re","AR","Vz",55,0.8,0.1,c("#440154FF","#31688EFF","#35B779FF","#FDE725FF"))
+gpc3d2(data,"Camber","Re","AR","Vz.cwl",55,0.8,0.1,c("#440154FF","#31688EFF","#35B779FF","#FDE725FF"))
+
+
+color.bar <- function(colors, values, minmax, nticks,digits) {
+  #min=round(min(values),digits=digits)
+  min=min(minmax)
+  tickmin=min
+  #max=round(max(values),digits=digits)
+  max=max(minmax)
+  ticks=seq(tickmin, max, len=nticks)
+  #	ticks<-formatC(ticks,format="e",digits=1)
+  ticks<-formatC(ticks,digits=digits)
+  scale<-seq(from=min,to=max,length.out=100)
+  len<-(length(scale)-1)/(max-min)
+  x <- myColorRamp(colors,scale,minmax)
+  par(mar=c(1,2,1,1))
+  plot(c(0,10), c(min,max), type='n', bty='n', xaxt='n', xlab='', yaxt='n', ylab='', main='')
+  #    axis(2, ticks, las=1,cex.axis=0.8)
+  axis(2, at=ticks,labels=ticks, las=1,cex.axis=1) #for scientific formating of labels
+  for (i in 1:(length(scale)-1)) {
+    y = (i-1)/len + min
+    rect(0,y,10,y+1/len, col=x[i], border=NA)
+  }
+}
+
+layout(matrix(c(1,2,3), 1, 3, byrow = TRUE),widths=c(4,4,1), heights=c(1))
+colors<-c("#440154FF","#31688EFF","#35B779FF","#FDE725FF")
+cols1 <- myColorRamp(colors, data$Vz, range(data$Vz.cwl))
+scatterplot3d(data$Camber,data$Re,data$AR,
+              pch=16,cex.symbols = 2,color=cols1,
+              xlab="Camber",
+              ylab=" ",
+              zlab="AR",
+              main="Vz constant mass",
+              angle=55,y.margin.add=1)
+dims <- par("usr")
+x <- dims[1]+ 0.7*diff(dims[1:2])
+y <- dims[3]+ 0.1*diff(dims[3:4])
+text(x,y,"Re",srt=55,font=1,cex=2.0)
+
+cols2 <- myColorRamp(colors, data$Vz.cwl, range(data$Vz.cwl))
+scatterplot3d(data$Camber,data$Re,data$AR,
+              pch=16,cex.symbols=2,color=cols2,
+              xlab="Camber",
+              ylab=" ",
+              zlab="AR",
+              main="Vz constant wing loading",
+              angle=55,y.margin.add=1)
+dims <- par("usr")
+x <- dims[1]+ 0.7*diff(dims[1:2])
+y <- dims[3]+ 0.1*diff(dims[3:4])
+text(x,y,"Re",srt=55,font=1,cex=2.0)
+
+color.bar(colors<-c("#440154FF","#31688EFF","#35B779FF","#FDE725FF"),data$Vz,range(data$Vz.cwl),5,2)
+
+
