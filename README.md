@@ -6,7 +6,8 @@ This repository contains the XFLR5 files, R analysis code, and morphological mea
 
 ## Repository contents
 
-The repository contains the following files: 
+The repository contains the following files:
+- Combined_birdwing_gpc_data_cwl.csv: File containing final data for gPC surrogate production. Produced from data_analysis R files.
 - XFLR5 files (.xfl) containing the XFLR5 projects for each camber (representing different folders in the repository), plane (representing different aspect ratios), and Reynolds number (representing different analyses within the Wing and Plane Design module). 
 - Data files (.csv) containing raw data exported from graphs within the XFLR5 projects. Each folder contains data files for a single camber, each file is named for its corresponding aspect ratio (AR). All Reynolds numbers/speed analyses are columns within each data file. Additionally, in estbirds/ the data file birds_for_surrogates_v3.csv contains raw morphology data for running performance estimates
 - R code (.R) files that load and process data files to provide final analysis. data_analysis.R is the main script for this data processing. plotting_gpc_birds.R was for basic visualization and data exploration. 
@@ -23,6 +24,7 @@ Folders:
   - Folders "Cam1" through "Cam25": simulations are primarily sorted by wing chordwise camber, with 25 separate cambers represented. Within these files are .xfl files A-E, depending on how many aspect ratios were required for a particular camber. It was necessary to break up these files to keep file sizes within limits required to post them on Github. 
   - Folder "Planes": contains xml files of planes for import into XFLR5 for each aspect ratio (25 separate planes). There is also a sample plane saved. 
  -panelwingGPC_cwl: contains XFLR5, data, and R code files used to create gPC surrogates for only the constant wing-loading version of minimum sinking speed Vz,min.
+This folder shares the same structure as panelwingGPC.
  
  ## How to use this repository
  
